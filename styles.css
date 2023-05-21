@@ -4,16 +4,37 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Roboto Mono', monospace;
-}
-
 :root {
   font-size: 62.5%;
 } 
 
+body {
+  background-color: #9fe7ed22;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.4rem;
+}
+
+.content {
+  display: grid;
+  grid-template-areas:
+    ". . . . ."
+    ". hero . form ." 
+    ". hero . form ."
+    ". . . . ."
+  ;
+  gap: 8.5rem;
+}
+
+main {
+  grid-area: form;
+}
+
+aside {
+  grid-area: hero;
+}
+
 aside h1 {
-  font-size: 64px;
+  font-size: 60px;
   font-weight: 500;
   line-height: 75px;
 }
@@ -25,8 +46,9 @@ aside h1 span, main h2 span {
 main {
   width: 60rem;
   height: 52rem;
-  border: 1px solid rgba(0, 0, 0, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.45);
   padding: 4.4rem 5.7rem;
+  border-radius: 1.2rem;
 }
 
 main h2 {
@@ -51,9 +73,24 @@ main .actions a {
   justify-content: center;
   align-items: center;
   color: rgba(0, 0, 0, 0.664);
+  margin-top: 4.8rem;
 }
 
 main .actions a + a {
   background-color: #f92f8d;
   margin-top: 4.8rem;
+}
+
+main footer p {
+  font-size: 1.3rem;
+  margin-top: 4rem;
+}
+
+main footer a {
+  margin-top: 1.5rem;
+  display: block;
+  font-size: 1.3rem;
+  text-align: center;
+  color: #000;
+
 }
